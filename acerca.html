@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acerca de — FallBreaker</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1022;--fg:#eef0ff;--ac:#ffb020;--mu:#8e95c4;--pn:#181c3a}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--fg);font-family:system-ui,sans-serif;margin:0;line-height:1.65}
+h1,h2,nav{font-family:'Chakra Petch',system-ui,sans-serif}
+nav{display:flex;gap:18px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid #ffffff22;font-weight:700}
+nav a{color:var(--mu);text-decoration:none}nav a:hover{color:var(--ac)}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 60px}
+h1{color:var(--ac);font-size:26px;margin-bottom:4px}
+h2{color:var(--ac);font-size:19px;margin-top:30px}
+.card{background:var(--pn);border-radius:10px;padding:16px 18px;margin:10px 0}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+td,th{padding:6px 8px;border-bottom:1px solid #ffffff1c;text-align:left;font-size:14px}
+th{color:var(--mu)}
+footer{text-align:center;color:var(--mu);font-size:12px;padding:30px 16px;border-top:1px solid #ffffff22;margin-top:40px}
+</style></head><body>
+<nav><a href="index.html">Inicio</a><a href="instrucciones.html">Cómo jugar</a><a href="acerca.html">Acerca de</a><a href="guias.html">Guías</a><a href="privacidad.html">Privacidad</a></nav>
+<div class="wrap">
+<h1>Acerca de FallBreaker</h1>
+<p>FallBreaker es un juego web gratuito que mezcla la caída de piezas estilo Tetris con la mecánica de romper bloques de un juego tipo Arkanoid, en una sola pantalla y 100 niveles de dificultad creciente.</p>
+
+<h2>Los 100 niveles</h2>
+<table><tr><th>Niveles</th><th>Dificultad</th></tr>
+<tr><td>1–20</td><td>Fácil</td></tr><tr><td>21–50</td><td>Medio</td></tr>
+<tr><td>51–80</td><td>Difícil</td></tr><tr><td>81–99</td><td>Experto</td></tr>
+<tr><td>100</td><td>Jefe final</td></tr></table>
+<p>Mientras más alto el nivel, más rápido cae la bola, más variedad de piezas aparecen y más corta es la barra.</p>
+
+<h2>Poderes y desventajas</h2>
+<p>Desde el nivel 6, romper un bloque puede soltar una cápsula que hay que atrapar con la barra:</p>
+<div class="card"><b>Poderes</b><ul>
+<li>Barra ampliada / Bola más lenta</li>
+<li>+1 bola (hasta 3 veces por nivel)</li>
+<li>+250 puntos</li>
+<li>Bola extra (bola múltiple temporal)</li>
+</ul></div>
+<div class="card"><b>Desventajas</b><ul>
+<li>Barra reducida / Bola más rápida</li>
+<li>Controles invertidos</li>
+</ul></div>
+
+<h2>Bloques especiales</h2>
+<p><b>Explosivos:</b> al destruirse, dañan a los bloques vecinos — a veces solo un poco, a veces los destruyen por completo. Si un vecino también es explosivo, la reacción sigue en cadena.</p>
+<p><b>Falsos:</b> se ven como bloques normales, pero al romperlos no cuentan para la meta del nivel.</p>
+<p><b>Líneas fusionadas:</b> si una fila se llena por completo, se convierte en un solo bloque resistente.</p>
+
+<h2>Nivel Infinito y dificultad asistida</h2>
+<p>El Nivel Infinito no tiene meta ni límite de tiempo: la dificultad sube lentamente mientras juegas, y tu progreso se guarda al salir. Y si un nivel normal se te resiste varias veces seguidas, el juego te ofrece la opción de bajarle la dificultad solo a ese nivel.</p>
+</div>
+<footer>FallBreaker</footer>
+</body></html>
