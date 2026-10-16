@@ -2,6 +2,7 @@
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>FallBreaker</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9984698573356225" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#e9ecf5;--fg:#141830;--pn:#fff;--ac:#e0561b;--mu:#5b6288;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -16,8 +17,8 @@ body{background:var(--bg);color:var(--fg);font-family:'Chakra Petch',system-ui,s
 #game-col{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;max-width:420px}
 #hud{display:flex;gap:14px;font-size:14px;font-weight:700;flex-wrap:wrap;justify-content:center;align-content:center;padding:0 8px;min-height:42px}
 #hud span{color:var(--mu);font-weight:500}
-#wrap{position:relative;width:100%;height:min(84dvh,747px);aspect-ratio:9/16}
-@media (min-width:860px){#page{flex-direction:row;justify-content:center;align-items:flex-start}.ad-h{display:none}.ad-v{display:flex;width:160px;min-height:600px}}
+#wrap{position:relative;width:100%;height:min(70dvh,747px);aspect-ratio:9/16}
+@media (min-width:860px){#page{flex-direction:row;justify-content:center;align-items:flex-start;gap:40px}#wrap{height:min(84dvh,747px)}.ad-h{display:none}.ad-v{display:flex;width:300px;min-height:260px}}
 canvas{width:100%;height:100%;background:#0d1022;border:2px solid var(--fg);border-radius:6px;cursor:none;display:block;touch-action:none;transition:background-color 1.5s ease}
 #pausebtn{position:absolute;top:8px;right:8px;z-index:2;width:32px;height:32px;padding:0;border-radius:50%;font-size:14px;background:#2a3068cc;color:#eef0ff;border:0}
 #homebtn{position:absolute;top:8px;left:8px;z-index:2;width:32px;height:32px;padding:0;border-radius:50%;font-size:14px;background:#2a3068cc;color:#eef0ff;border:0}
@@ -32,14 +33,36 @@ button:disabled{opacity:.3;cursor:default}
 .tier{grid-column:1/-1;text-align:left;font-size:12px;color:#8e95c4;margin-top:6px}
 </style></head><body>
 <div id="page">
-<div class="adslot ad-v" id="adLeft">Espacio<br>publicitario</div>
-<div class="adslot ad-h" id="adTop">Espacio publicitario</div>
+<div class="adslot ad-v" id="adLeft"><!-- Espacio libre: puedes poner aquí una unidad manual de AdSense (crea una en tu panel) u otro anuncio de 300x250 --></div>
+<div class="adslot ad-h" id="adTop">
+<script>
+  atOptions = {
+    'key' : 'ff37af5ce88988d39c611c7d8084c665',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/ff37af5ce88988d39c611c7d8084c665/invoke.js"></script>
+</div>
 <div id="game-col">
 <div id="hud">Nivel <b id="hl">1</b> <span id="hd"></span> Sig <b id="hn">-</b> Bolas <b id="hv">3</b> Figuras <b id="hg">0/0</b> Puntos <b id="hs">0</b></div>
 <div id="wrap"><canvas id="c" width="360" height="640"></canvas><button id="homebtn" onclick="menu()">☰</button><button id="pausebtn" onclick="togglePause()">⏸</button><div id="ov"></div></div>
 </div>
-<div class="adslot ad-h" id="adBottom">Espacio publicitario</div>
-<div class="adslot ad-v" id="adRight">Espacio<br>publicitario</div>
+<div class="adslot ad-h" id="adBottom"><!-- Espacio libre: puedes poner aquí una unidad manual de AdSense u otro anuncio de 320x50 --></div>
+<div class="adslot ad-v" id="adRight">
+<script>
+  atOptions = {
+    'key' : '213a941f957d6a0c47f310b9131a106c',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/213a941f957d6a0c47f310b9131a106c/invoke.js"></script>
+</div>
 </div>
 <!-- Listo para pegar aquí tus scripts reales de Google AdSense / Adsterra / Monetag una vez alojado en tu dominio (aquí quedarían bloqueados por el visor de Claude). -->
 <script>
@@ -79,6 +102,7 @@ function togglePause(){if(!g||g.st!='play')return;paused=!paused;beep(paused?260
 function menu(){saveInf();g=null;let h='<h1>FallBreaker</h1><p>Flechas o gestos mueven y giran la pieza. Mueve la barra con el mouse o el dedo. Rompe las figuras con la bola.</p><div id="g"><button class="big" style="grid-column:1/-1" onclick="startInfinite()">∞ Nivel Infinito</button>';
 NAMES.forEach((nm,t)=>{const a=[1,21,51,81,100][t],b=[20,50,80,99,100][t];h+=`<div class="tier">${nm} (${a}${b>a?'–'+b:''})</div>`;
 for(let n=a;n<=b;n++){const as=assisted(n);h+=`<button ${n>unlocked?'disabled':''} ${as?'style="border:2px solid #845ef7"':''} onclick="start(${n})">${n}${as?' ↓':''}</button>`}});
+h+='<div style="grid-column:1/-1;text-align:center;margin-top:10px;font-size:12px"><a href="instrucciones.html" style="color:#8e95c4">Cómo jugar</a> · <a href="acerca.html" style="color:#8e95c4">Acerca de</a> · <a href="guias.html" style="color:#8e95c4">Guías</a> · <a href="privacidad.html" style="color:#8e95c4">Privacidad</a></div>';
 ov.innerHTML=h+'</div>';ov.style.display='flex'}
 function fits(cs,px,py){return cs.every(([a,b])=>{const X=px+a,Y=py+b;return X>=0&&X<C&&Y<R&&(Y<0||!g.grid[Y][X])})}
 function rot(cs){const r=cs.map(([a,b])=>[-b,a]),mx=Math.min(...r.map(p=>p[0])),my=Math.min(...r.map(p=>p[1]));return r.map(([a,b])=>[a-mx,b-my])}
@@ -235,4 +259,6 @@ else if(Math.abs(dx)>STEP){const dir=dx>0?1:-1;if(fits(cp.cs,cp.px+dir,cp.py))cp
 cv.addEventListener('touchend',e=>{e.preventDefault();if(touch&&!touch.moved&&!paused){if(g&&g.b.on)launch();if(touch.zone=='piece')rotatePiece()}touchFast=false;touch=null},{passive:false});
 cv.addEventListener('touchcancel',()=>{touchFast=false;touch=null});
 menu();
-</script></body></html>
+</script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(e){})}</script>
+</body></html>
