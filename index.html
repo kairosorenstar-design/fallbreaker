@@ -23,9 +23,8 @@ body{background:var(--bg);color:var(--fg);font-family:'Chakra Petch',system-ui,s
 canvas{width:100%;height:100%;background:#0d1022;border:2px solid var(--fg);border-radius:6px;cursor:none;display:block;touch-action:none;transition:background-color 1.5s ease}
 #pausebtn{position:absolute;top:78px;right:8px;z-index:2;width:32px;height:32px;padding:0;border-radius:50%;font-size:14px;background:#2a3068cc;color:#eef0ff;border:0}
 #homebtn{position:absolute;top:78px;left:8px;z-index:2;width:32px;height:32px;padding:0;border-radius:50%;font-size:14px;background:#2a3068cc;color:#eef0ff;border:0}
-.ad-below{width:100%;max-width:420px;margin-top:4px}
-.ad-below-m{display:flex}.ad-below-d{display:none}
-@media (min-width:860px){.ad-below-m{display:none}.ad-below-d{display:flex;margin-top:28px}}
+.ad-below{width:100%;max-width:420px;margin-top:4px;display:flex}
+@media (min-width:860px){.ad-below{display:none}}
 #ov{position:absolute;inset:0;background:#0d1022ee;color:#eef0ff;display:flex;flex-direction:column;align-items:center;padding:14px;overflow:auto;border-radius:6px;text-align:center}
 #ov h1{margin:4px 0;font-size:26px;color:#ffb020}
 #ov p{margin:4px 0;font-size:13px;color:#b8bfe8;max-width:300px}
@@ -53,7 +52,7 @@ button:disabled{opacity:.3;cursor:default}
 <div id="game-col">
 <div id="hud">Nivel <b id="hl">1</b> <span id="hd"></span> Sig <b id="hn">-</b> Bolas <b id="hv">3</b> Fig <b id="hg">0/0</b> Pts <b id="hs">0</b></div>
 <div id="wrap"><canvas id="c" width="360" height="640"></canvas><button id="homebtn" onclick="menu()">☰</button><button id="pausebtn" onclick="togglePause()">⏸</button><div id="ov"></div></div>
-<div class="ad-below ad-below-m">
+<div class="ad-below">
 <script>
   atOptions = {
     'key' : 'ff37af5ce88988d39c611c7d8084c665',
@@ -65,7 +64,9 @@ button:disabled{opacity:.3;cursor:default}
 </script>
 <script src="https://www.highrevenueformat.com/ff37af5ce88988d39c611c7d8084c665/invoke.js"></script>
 </div>
-<div class="ad-below ad-below-d">
+</div>
+<div class="adslot ad-h" id="adBottom"><!-- Espacio libre --></div>
+<div class="adslot ad-v" id="adRight">
 <script>
   atOptions = {
     'key' : '213a941f957d6a0c47f310b9131a106c',
@@ -77,9 +78,6 @@ button:disabled{opacity:.3;cursor:default}
 </script>
 <script src="https://www.highrevenueformat.com/213a941f957d6a0c47f310b9131a106c/invoke.js"></script>
 </div>
-</div>
-<div class="adslot ad-h" id="adBottom"><!-- Espacio libre --></div>
-<div class="adslot ad-v" id="adRight"><!-- Espacio libre: puedes poner aquí una unidad manual de AdSense --></div>
 </div>
 <!-- Listo para pegar aquí tus scripts reales de Google AdSense / Adsterra / Monetag una vez alojado en tu dominio (aquí quedarían bloqueados por el visor de Claude). -->
 <script>
